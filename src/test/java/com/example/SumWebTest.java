@@ -24,8 +24,7 @@ driver = new ChromeDriver(options);
 @Test
 public void testSum() throws InterruptedException {
 String url =
-"file:///C:/ProgramData/Jenkins/.jenkins/workspace/SeleniumWebSumTest/src/test/resour
-ces/sum.html";
+"file:///C:/ProgramData/Jenkins/.jenkins/workspace/SeleniumWebSumTest/src/test/resources/sum.html";
 driver.get(url);
 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 wait.until(ExpectedConditions.presenceOfElementLocated(By.id("num1")));
@@ -46,4 +45,5 @@ assertEquals("Sum = 30", output);
 public void tearDown() {
 if (driver != null) driver.quit();
 }
+
 }
